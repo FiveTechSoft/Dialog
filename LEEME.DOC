@@ -1,0 +1,84 @@
+                              DIALOG 1.00
+                              ===========
+
+              Relaci¢n de ficheros e instrucciones de uso
+              ===========================================
+
+Directorios   Ficheros
+
+    DOC       DIALOG.NG
+              Documentaci¢n de la librer¡a en versi¢n Gu¡a Norton.
+              La documentaci¢n contenida en esta gu¡a es un resumen
+              de la documentaci¢n del manual.
+
+    LIB       DIALOG.LIB
+              Espec¡fica esta librer¡a a enlazar tu programa:
+
+              CLIPPER programa.prg /n
+              RTLINK fi programa lib dialog
+
+    FUENTES   C      C¢digo fuente y OBJs de las funciones en C utilizadas
+                     en Dialog. Para producir los OBJs a partir de los
+                     ficheros C se ha utilizado el compilador Borland C++ 3.0:
+
+                     bcc -c -ml -P- codigo.c
+
+              FUNCS  C¢digo fuente de las funciones en Clipper utilizadas
+                     en la librer¡a Dialog y por alguno de los tutoriales
+                     (tutor__.prg).  Estos ficheros han sido incluidos en
+                     la librer¡a DIALOG siguiendo el siguiente proceso:
+
+                            clipper funcion.prg /n
+                            lib dialog -+ funcion.obj
+
+                     Utilizando este sistema podr s actualizar cualquiera de
+                     estas funciones ¢ bien a¤adir tus propias funciones. Es
+                     necesario que dispongas del programa LIB.EXE (Microsoft)
+                     ¢ TLIB.EXE (Borland).
+
+              OOPS   C¢digo fuente de las funciones en Clipper que permiten
+                     la implementaci¢n del OOPS en Dialog. El fichero OOPS.CH
+                     es exactamente el fichero DIALOG.CH
+                     Este m¢dulo se ha a¤adido a DIALOG.LIB siguiendo el mismo
+                     proceso que se ha descrito en FUNCS.
+
+    EJEMPLOS         Contiene los ficheros del tutorial tutor__.prg y muchos
+                     m s ejemplos que te permitir n estudiar y comprender la
+                     forma de utilizar Dialog.
+
+                     Lo primero que debes hacer es crear los EXEs correspondentes
+                     para ver los ejemplos de uso de Dialog. La forma de produ-
+                     cir estos EXEs es la siguiente:
+
+                     clipper tutor__.prg /n
+                     rtlink fi tutor__ lib dialog
+
+
+                             INSTRUCCIONES
+                             =============
+
+ - No hace falta realizar ning£n proceso de instalaci¢n para utilizar Dialog.
+
+ - Lo £nico que necesitas es copiar la librer¡a Dialog.lib al directorio en
+   donde tengas habitualmente las librer¡as de Clipper (Clipper.lib,
+   extend.lib, etc...) (CLIPPER5\LIB).
+   Copia el fichero dialog.ch al directorio en donde tengas los ficheros
+   CH (CLIPPER5\INCLUDE).
+
+ - Antes que nada compila y enlaza los ficheros que vienen en el directorio
+   EJEMPLOS y practica con ellos. La forma de construir los ficheros EXE
+   es la siguiente:
+
+                 clipper programa.prg /n
+                 rtlink fi programa lib dialog
+
+   (programa.prg puede ser cualquiera de los ficheros contenidos en \EJEMPLOS).
+
+ - Conforme vayas creando tus cajas de Di logo podr s ir guard ndolas en una
+   librer¡a y as¡ usarlas desde tus programas. A trav‚s de ClippeRman¡a iremos
+   comentando y estudiando las mejores Cajas que vayan apareciendo y cada
+   cierto tiempo publicaremos una librer¡a con las Cajas m s £tiles e
+   interesantes.
+
+ - Espero que disfrutes usando Dialog!
+
